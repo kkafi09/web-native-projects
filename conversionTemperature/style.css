@@ -6,10 +6,12 @@
 }
 body {
   box-sizing: border-box;
+  background-image: linear-gradient(to right, red, yellow);
 }
 
 .inputs {
-  background-color: red;
+  background-image: linear-gradient(to bottom, #71a4f5, #075ee8);
+  box-shadow: 5px, 5px, 5px, 5px, rgba(0, 0, 0, 0.5);
   border-radius: 10px;
   width: 400px;
   height: 380px;
