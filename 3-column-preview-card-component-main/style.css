@@ -5,16 +5,24 @@
   --orange: hsl(31, 77%, 52%);
   --cyan: hsl(184, 100%, 22%);
   --dark-cyan: hsl(179, 100%, 13%);
+  --caption-color: hsla(0, 0%, 100%, 0.75);
+  --back-head-buttons: hsl(0, 0%, 95%);
 }
 
 .bg-1 {
   background-color: var(--orange);
+  border-top-left-radius: 8px;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 8px;
 }
 .bg-2 {
   background-color: var(--cyan);
 }
 .bg-3 {
   background-color: var(--dark-cyan);
+  border-top-right-radius: 8px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 8px;
 }
 .f-1 {
   color: var(--orange);
@@ -34,8 +42,9 @@
 
 .container {
   display: flex;
-  margin-top: 50px;
+  margin-top: 60px;
   justify-content: center;
+  align-items: center;
 }
 
 .grid-cover {
@@ -44,11 +53,10 @@
   width: 926px;
   height: 480px;
   grid-template-columns: repeat(3, 1fr);
-  transition: all 0.3 ease;
 }
 
 .items {
-  margin: 45px;
+  margin: 40px;
 }
 
 img {
@@ -58,14 +66,15 @@ img {
 .title {
   font-family: "Big Shoulders Display", sans-serif;
   margin: 38px 0;
-  color: white;
+  color: var(--back-head-buttons);
   text-transform: uppercase;
+  font-size: 2.125rem;
 }
 
 .caption {
   font-family: "Lexend Deca", sans-serif;
-  color: white;
-  line-height: 1.5;
+  color: var(--caption-color);
+  line-height: 2rem;
   font-weight: 400;
   margin-bottom: 75px;
   font-size: 15px;
@@ -74,7 +83,7 @@ img {
 button {
   font-family: "Lexend Deca", sans-serif;
   background-color: white;
-  font-weight: 700;
+  font-weight: 400;
   width: 140px;
   height: 45px;
   border-radius: 40px;
@@ -82,23 +91,39 @@ button {
   cursor: pointer;
 }
 
-@media (max-width: 968px) {
-  .grid-cover {
-    display: grid;
-    align-items: center;
-    width: 768px;
-    height: 480px;
-    grid-template-columns: repeat(2, 1fr);
-    transition: all 0.3 ease;
-  }
+button:hover {
+  background-color: inherit;
+  border: 2px solid white;
+  color: var(--back-head-buttons);
+  transition: all 0.3 ease;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 890px) {
   .grid-cover {
     display: grid;
     max-width: 375px;
     height: 440px;
     grid-template-columns: repeat(1, 1fr);
-    transition: all 0.3 ease;
+  }
+
+  .bg-1 {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-left-radius: 0px;
+  }
+
+  .bg-3 {
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
+}
+
+@media (max-width: 924px) {
+  .grid-cover {
+    margin: 0 20px;
+  }
+  .container {
+    margin-bottom: 70rem;
   }
 }
