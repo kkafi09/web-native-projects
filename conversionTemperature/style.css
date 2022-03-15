@@ -6,42 +6,42 @@
 }
 body {
   box-sizing: border-box;
-  background-image: linear-gradient(to right, red, yellow);
+  background-color: rgb(59 130 246);
 }
 
-.inputs {
-  background-image: linear-gradient(to bottom, #71a4f5, #075ee8);
-  box-shadow: 5px, 5px, 5px, 5px, rgba(0, 0, 0, 0.5);
-  border-radius: 10px;
+.conversion {
+  background-color: #ffff;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+  border-radius: 6px;
   width: 400px;
-  height: 380px;
-  margin: 10% auto;
+  height: 360px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   justify-content: center;
   align-items: center;
   text-align: center;
+  padding: 20px;
 }
 
 p {
   margin-left: 15px;
-  font-weight: bold;
+  font-weight: 500;
   font-family: "Poppins", sans-serif;
 }
 
-.conversion {
-  padding-top: 20px;
-}
-
 .input {
-  width: 100%;
   display: block;
   width: 90%;
   margin: 10px auto;
   outline: none;
-  height: 20px;
+  height: 25px;
   border: 1px solid black;
-  border-radius: 5px;
+  border-radius: 3px;
 }
 
 input[type="number"] {
-  padding: 5px;
+  padding: 7px;
 }
